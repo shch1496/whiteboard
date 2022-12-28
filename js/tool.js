@@ -34,9 +34,15 @@ function handleColorChange(color) {
 
 const hamburger = document.querySelector(".hamburger");
 const toolPanel = document.querySelector(".tool-panel");
-hamburger.addEventListener("click", function() {
-   handleHamburger() 
+hamburger.addEventListener("click", function () {
+  handleHamburger();
 
   socket.emit("hamburger");
 });
 
+function windowResize() {
+  board.width = window.innerWidth;
+  board.height = window.innerHeight;
+}
+
+window.addEventListener("resize", windowResize);
