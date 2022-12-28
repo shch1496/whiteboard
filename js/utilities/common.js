@@ -32,13 +32,13 @@ function createBox(){
   let isStickyDown = false;
 
   // added move sticky logic
-  navBar.addEventListener("mousedown", function(e) {
+  navBar.addEventListener("pointerdown", function(e) {
     initialX = e.clientX;
     initialY = e.clientY;
     isStickyDown = true;
   });
 
-  navBar.addEventListener("mousemove", function(e) {
+  navBar.addEventListener("pointermove", function(e) {
     if (isStickyDown == true) {
       let finalX = e.clientX;
       let finalY = e.clientY;
@@ -56,11 +56,11 @@ function createBox(){
     }
   });
   // sticky => mouseup
-  navBar.addEventListener("mouseup", function() {
+  navBar.addEventListener("pointerup", function() {
     isStickyDown = false;
   });
   // pointer => moved off sticky
-  navBar.addEventListener("mouseleave", function() {
+  navBar.addEventListener("pointerleave", function() {
     isStickyDown = false;
   });
   document.body.appendChild(stickyPad);
