@@ -79,7 +79,7 @@ border-bottom: grey 1px solid;
 
 input[type=range] {
   
-  -webkit-appearance: none;
+ 
   width: 90%;
   height: 13px;
   border-radius: 5px;
