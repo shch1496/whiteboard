@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
     <title>NoteBoard</title>
 
     <link rel="stylesheet" href="./css/style.css" />
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="./css/hamburger.css" />
     <link rel="stylesheet" href="./css/queries.css" />
     <link rel="shortcut icon" href="./NewIcons/pep.png" type="image/x-icon" />
+
   </head>
 
   <body>
@@ -144,13 +146,13 @@
     <script src="./js/reciever.js"></script>
 
     <script>
-        const canvas = document.querySelector('.board');
-          function windowResize() {
-            canvas.width  = window.innerWidth;
-            canvas.height = window.innerHeight;
-      };
+      const canvas = document.querySelector('.board');
+        function windowResize() {
+          canvas.width  = window.innerWidth;
+          canvas.height = window.innerHeight;
+    };
 
-         window.addEventListener('resize', windowResize);
-        </script>
+       window.addEventListener('resize', windowResize);
+      </script>
   </body>
 </html>
