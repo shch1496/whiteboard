@@ -40,14 +40,14 @@ hamburger.addEventListener("click", function () {
   socket.emit("hamburger");
 });
 
-// function windowResize() {
-//   board.width = window.innerWidth;
-//   board.height = window.innerHeight;
-// }
+function windowResize() {
+  board.width = window.innerWidth;
+  board.height = window.innerHeight;
+}
 
-// window.addEventListener("resize", windowResize);
-const observer = new ResizeObserver((entries) => {
-  board.width = board.clientWidth;
-  board.height = board.clientHeight;
-});
-observer.observe(board);
+window.addEventListener("resize", windowResize);
+// const observer = new ResizeObserver((entries) => {
+//   board.width = board.clientWidth;
+//   board.height = board.clientHeight;
+// });
+// observer.observe(board);
