@@ -1,5 +1,5 @@
 // connect to socket server
-const socket = io.connect("https://pepboard.herokuapp.com/");
+// const socket = io.connect("https://pepboard.herokuapp.com/");
 // *********************************Basic Setup
 const board = document.querySelector(".board");
 board.height = window.innerHeight;
@@ -29,7 +29,7 @@ function handleLocaltoolChange(tool) {
 // ******************handle color****************************
 function handleColorChange(color) {
   ctx.strokeStyle = color;
-  socket.emit("color", color);
+  // socket.emit("color", color);
 }
 
 const hamburger = document.querySelector(".hamburger");
@@ -37,17 +37,32 @@ const toolPanel = document.querySelector(".tool-panel");
 hamburger.addEventListener("click", function () {
   handleHamburger();
 
-  socket.emit("hamburger");
+  // socket.emit("hamburger");
 });
 
-function windowResize() {
-  board.width = window.innerWidth;
-  board.height = window.innerHeight;
-}
+// function windowResize() {
+//   board.width = window.innerWidth;
+//   board.height = window.innerHeight;
+// }
 
-window.addEventListener("resize", windowResize);
+// window.addEventListener("resize", windowResize);
 // const observer = new ResizeObserver((entries) => {
 //   board.width = board.clientWidth;
 //   board.height = board.clientHeight;
 // });
 // observer.observe(board);
+
+window.onresize = updateCanvas;
+
+updateCanvas();
+
+function updateCanvas() {
+
+    var cs = getComputedStyle(board);
+    var width = parseInt(cs.getPropertyValue('width'), 10);
+    var height = parseInt(cs.getPropertyValue('height'), 10);
+    
+    board.width = width;
+    board.height = height;
+    
+}

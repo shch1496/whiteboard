@@ -33,6 +33,7 @@ function createBox(){
 
   // added move sticky logic
   navBar.addEventListener("pointerdown", function(e) {
+
     initialX = e.clientX;
     initialY = e.clientY;
     isStickyDown = true;

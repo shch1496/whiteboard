@@ -16,7 +16,7 @@ board.addEventListener("pointerdown", function(e) {
 
   undoStack.push(point);
 
-  socket.emit("pointerdown", point);
+  // socket.emit("pointerdown", point);
   // event emit
 });
 // mmousedown x,y beginPath,moveTo(x,y),color,size
@@ -35,8 +35,10 @@ board.addEventListener("pointermove", function(e) {
       color: ctx.strokeStyle,
       width: ctx.lineWidth
     };
+
+    console.log(e.clientX, e.clientY)
     undoStack.push(point);
-    socket.emit("pointermove", point);
+    // socket.emit("pointermove", point);
   }
 });
 
