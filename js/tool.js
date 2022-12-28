@@ -52,17 +52,17 @@ window.addEventListener("resize", windowResize);
 // });
 // observer.observe(board);
 
-window.onresize = updateCanvas;
+// window.onresize = updateCanvas;
 
-updateCanvas();
+// updateCanvas();
 
-function updateCanvas() {
+// function updateCanvas() {
 
-    var cs = getComputedStyle(board);
-    var width = parseInt(cs.getPropertyValue('width'), 10);
-    var height = parseInt(cs.getPropertyValue('height'), 10);
+//     var cs = getComputedStyle(board);
+//     var width = parseInt(cs.getPropertyValue('width'), 10);
+//     var height = parseInt(cs.getPropertyValue('height'), 10);
     
-    board.width = width;
-    board.height = height;
+//     board.width = width;
+//     board.height = height;
     
-}
+// }
